@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <div class="todo">
+      <h2 class="todo-title">Список cправ</h2>
+      <form class="todo-search">
+        <label class="search">
+          <input class="search-text" />
+          <svg class="icon-search" width="24" height="24">
+            <use href="./picture/icons.svg#search"></use>
+          </svg>
+        </label>
+        <ul class="check-list">
+          <li>домашні справи</li>
+          <li>робота</li>
+          <li>фітнес</li>
+        </ul>
+      </form>
+      <ul class="todo-list">
+        <li class="todo-item">
+          <div>
+            <div class="box-type-item">
+              <h4 class="type-item">Домашні справи</h4>
+              <ul>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <h3>Купити продукти</h3>
+            <p>Скласти список необхідних продуктів та відвідати магазин.</p>
+          </div>
+          <div>
+            <button class="button" type="button">Завершити</button>
+          </div>
+        </li>
+      </ul>
+      <div class="position-button">
+        <button class="button" type="button">Додати справу</button>
+      </div>
+    </div>
+    <script type="module" src=".jsscripr.js"></script>
+  </body>
+</html>
