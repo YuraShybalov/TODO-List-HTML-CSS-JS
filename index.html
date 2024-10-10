@@ -7,43 +7,94 @@
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
-    <div class="todo">
-      <h2 class="todo-title">Список cправ</h2>
-      <form class="todo-search">
-        <label class="search">
-          <input class="search-text" />
-          <svg class="icon-search" width="24" height="24">
-            <use href="./picture/icons.svg#search"></use>
-          </svg>
-        </label>
-        <ul class="check-list">
-          <li>домашні справи</li>
-          <li>робота</li>
-          <li>фітнес</li>
-        </ul>
+    <h1>Список справ</h1>
+    <search>
+      <form>
+        <input type="search" />
+        <div class="categories">
+          <input type="radio" name="categories" hidden id="household" /><label
+            for="household"
+            >Домашні справи</label
+          >
+          <input type="radio" name="categories" hidden id="work" /><label
+            for="work"
+            >Робота</label
+          >
+          <input type="radio" name="categories" hidden id="fitnes" /><label
+            for="fitnes"
+            >Фітнес</label
+          >
+        </div>
       </form>
-      <ul class="todo-list">
-        <li class="todo-item">
-          <div>
-            <div class="box-type-item">
-              <h4 class="type-item">Домашні справи</h4>
-              <ul>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <h3>Купити продукти</h3>
-            <p>Скласти список необхідних продуктів та відвідати магазин.</p>
-          </div>
-          <div>
-            <button class="button" type="button">Завершити</button>
-          </div>
-        </li>
-      </ul>
-      <div class="position-button">
-        <button class="button" type="button">Додати справу</button>
+    </search>
+    <ul>
+      <li class="todo-item completed">
+        <div class="tags">
+          <p class="tag">фітнес</p>
+        </div>
+        <div class="actions">
+          <button class="icon-btn">
+            <svg width="24" height="24">
+              <use href="./picture/icons.svg#edit"></use>
+            </svg>
+          </button>
+          <button class="icon-btn">
+            <svg width="24" height="24">
+              <use href="./picture/icons.svg#delete"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="content">
+          <h2>Title</h2>
+          <p>Description</p>
+        </div>
+        <button class="primary" type="button">
+          <svg width="20" height="20">
+            <use href="./picture/icons.svg#check"></use></svg
+          >Завершити
+        </button>
+      </li>
+    </ul>
+    <form id="edit-form">
+      <div class="form-control">
+        <label>Категорія</label>
+        <div class="categories">
+          <input type="radio" name="categories" hidden id="household" /><label
+            for="household"
+            >Домашні справи</label
+          >
+          <input type="radio" name="categories" hidden id="work" /><label
+            for="work"
+            >Робота</label
+          >
+          <input type="radio" name="categories" hidden id="fitnes" /><label
+            for="fitnes"
+            >Фітнес</label
+          >
+        </div>
       </div>
-    </div>
+      <div class="form-control">
+        <label>Заговолок</label>
+        <input name="title" />
+      </div>
+      <div class="form-control">
+        <label>Опис</label>
+        <textarea rows="4" name="desc"></textarea>
+      </div>
+      <div class="form-actions">
+        <button class="secondary" type="button">
+          <svg width="20" height="20">
+            <use href="./picture/icons.svg#close"></use></svg
+          >Скасувати
+        </button>
+        <button class="primary" type="button">
+          <svg width="20" height="20">
+            <use href="./picture/icons.svg#icon-check"></use></svg
+          >Зберегти
+        </button>
+      </div>
+    </form>
+
     <script type="module" src=".jsscripr.js"></script>
   </body>
 </html>
