@@ -27,35 +27,9 @@
         </div>
       </form>
     </search>
-    <ul>
-      <li class="todo-item completed">
-        <div class="tags">
-          <p class="tag">фітнес</p>
-        </div>
-        <div class="actions">
-          <button class="icon-btn">
-            <svg width="24" height="24">
-              <use href="./picture/icons.svg#edit"></use>
-            </svg>
-          </button>
-          <button class="icon-btn">
-            <svg width="24" height="24">
-              <use href="./picture/icons.svg#delete"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="content">
-          <h2>Title</h2>
-          <p>Description</p>
-        </div>
-        <button class="primary" type="button">
-          <svg width="20" height="20">
-            <use href="./picture/icons.svg#check"></use></svg
-          >Завершити
-        </button>
-      </li>
-    </ul>
-    <form id="edit-form">
+    <ul id="todo-list"></ul>
+    <hr />
+    <form id="edit-form" data-mode="create" data-editId="">
       <div class="form-control">
         <label>Категорія</label>
         <div class="categories">
@@ -82,19 +56,47 @@
         <textarea rows="4" name="desc"></textarea>
       </div>
       <div class="form-actions">
-        <button class="secondary" type="button">
+        <button class="secondary">
           <svg width="20" height="20">
             <use href="./picture/icons.svg#close"></use></svg
           >Скасувати
         </button>
-        <button class="primary" type="button">
+        <button class="primary" type="submit">
           <svg width="20" height="20">
             <use href="./picture/icons.svg#icon-check"></use></svg
           >Зберегти
         </button>
       </div>
     </form>
+    <template id="todo-list-item-template">
+      <li class="todo-item">
+        <div class="tags">
+          <p class="tag">фітнес</p>
+        </div>
+        <div class="actions">
+          <button class="icon-btn" data-action="edit">
+            <svg width="24" height="24">
+              <use href="./picture/icons.svg#edit"></use>
+            </svg>
+          </button>
+          <button class="icon-btn" data-action="delete">
+            <svg width="24" height="24">
+              <use href="./picture/icons.svg#delete"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="content">
+          <h2 class="title">Title</h2>
+          <p class="desc">Description</p>
+        </div>
+        <button class="primary">
+          <svg width="20" height="20">
+            <use href="./picture/icons.svg#check"></use></svg
+          >Завершити
+        </button>
+      </li>
+    </template>
 
-    <script type="module" src=".jsscripr.js"></script>
+    <script type="module" src="/JS/script.js"></script>
   </body>
 </html>
