@@ -13,7 +13,7 @@ const idGenerator = makeId();
 
 editForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const formData = new FormData(editForm); //збираємо дані з форми
+  const formData = new FormData(editForm);
   const data = Object.fromEntries(formData.entries());
   let listItem;
   if (editForm.dataset.mode === "create") {
