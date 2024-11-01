@@ -89,6 +89,11 @@ button {
     pointer-events: none;
   }
 }
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 .todo-item {
   display: grid;
   grid-template-areas:

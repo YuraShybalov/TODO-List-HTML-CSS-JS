@@ -37,7 +37,7 @@ editForm.addEventListener("submit", (event) => {
 });
 
 function editItem(element) {
-  editForm.dataset.mode = "edit";
+  editForm.dataset.modeb = "edit";
   editForm.dataset.editId = element.id;
   editForm.querySelector("[name=title]").value =
     element.querySelector(".title").innerText;
@@ -49,6 +49,10 @@ function deleteItem(element) {
   element.remove();
 }
 
+function toggleItemCompletion(element) {
+  element.classList.toggle("completed");
+}
+
 listElement.addEventListener("click", (event) => {
   const item = event.target.closest(".todo-item");
   switch (event.target.dataset.action) {
@@ -56,6 +60,8 @@ listElement.addEventListener("click", (event) => {
       editItem(item);
     case "delete":
       deleteItem(item);
+    case "complete":
+      toggleItemCompletion(item);
     default:
       return;
   }
